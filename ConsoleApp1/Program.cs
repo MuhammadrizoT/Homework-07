@@ -270,9 +270,8 @@
         static void ReturnToParent()
         {
             Console.Clear();
-
-            DirectoryInfo folderParent = Directory.GetParent(path);
-            path = folderParent.Parent + @"\";
+            
+            path = Directory.GetParent(path).Parent + @"\";
 
             Console.WriteLine("\n\nCurrent page successfully changed\n");
             Console.WriteLine($"Your current page: {path}");
